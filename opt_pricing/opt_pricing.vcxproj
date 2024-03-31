@@ -128,10 +128,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="black_scholes.cpp" />
+    <ClCompile Include="normal_cdf.cpp" />
     <ClCompile Include="opt_pricing.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="black_scholes.h" />
+    <ClInclude Include="normal_cdf.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

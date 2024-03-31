@@ -21,9 +21,15 @@
     <ClCompile Include="black_scholes.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="normal_cdf.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="black_scholes.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="normal_cdf.h">
       <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -7,8 +7,6 @@ enum OptionType {
 	PUT
 };
 
-void print_smth(int some_val);
-
 double normal_cdf(double x);
 
 class BlackScholesOptionPricing {
@@ -29,7 +27,5 @@ private:
 	double dp;
 	double dn;
 };
-
-
 
 #endif 
