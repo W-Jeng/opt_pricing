@@ -15,8 +15,8 @@ public:
 		const double& risk_free_rate, const double& time_to_exp);
 
 	double price(const OptionType& option_type);
-	void set_dp();
-	void set_dn();
+	double set_dp();
+	double set_dn(const double& dp);
 
 private:
 	const double& stock_price;
@@ -24,8 +24,7 @@ private:
 	const double& volatility;
 	const double& risk_free_rate;
 	const double& time_to_exp;
-	double dp;
-	double dn;
+	
 };
 
 #endif 

@@ -9,8 +9,8 @@ BlackScholesOptionPricing::BlackScholesOptionPricing(const double& stock_price, 
 
 double BlackScholesOptionPricing::price(const OptionType& option_type) {
 	
-	set_dp();
-	set_dn();
+	const double dp = set_dp();
+	const double dn = set_dn(dp);
 
 	double call_price = stock_price * normal_cdf(dp) - strike_price * std::exp(-risk_free_rate * time_to_exp) * normal_cdf(dn);
 	if (option_type == CALL) {
@@ -20,12 +20,10 @@ double BlackScholesOptionPricing::price(const OptionType& option_type) {
 	}
 }
 
-void BlackScholesOptionPricing::set_dp() {
-	BlackScholesOptionPricing::dp = (log(stock_price / strike_price) + (risk_free_rate + pow(volatility, 2) / 2) * time_to_exp) / (volatility * pow(time_to_exp, 0.5));
-	return;
+double BlackScholesOptionPricing::set_dp() {
+	return (log(stock_price / strike_price) + (risk_free_rate + pow(volatility, 2) / 2) * time_to_exp) / (volatility * pow(time_to_exp, 0.5));
 }
 
-void BlackScholesOptionPricing::set_dn() {
-	BlackScholesOptionPricing::dn = dp - volatility * pow(time_to_exp, 0.5);
-	return;
+double BlackScholesOptionPricing::set_dn(const double& dp) {
+	return  dp - volatility * pow(time_to_exp, 0.5);
 }

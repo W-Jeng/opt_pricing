@@ -7,7 +7,7 @@ int main()
     BlackScholesOptionPricing bs_opt(100, 120, 0.1, 0.01, 1);
     
     double option_val = bs_opt.price(opt_type);
-    std::cout << "option value: " << option_val << "\n";
+    std::cout << "Option value: " << option_val << "\n";
 
     return 0;
 }
